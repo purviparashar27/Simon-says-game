@@ -1,0 +1,112 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:center;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#1f1f2e,#2b2b3d);
+    color:#f1f1f1;
+    overflow-x:hidden;
+}
+
+/* Smooth background animation */
+body::before{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:rgba(255,255,255,0.05);
+    filter:blur(120px);
+    border-radius:50%;
+    top:-100px;
+    left:-100px;
+    animation: moveGlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes moveGlow{
+    from{transform:translate(0,0);}
+    to{transform:translate(200px,150px);}
+}
+
+/* Headings */
+h1{
+    font-size:3rem;
+    margin-top:30px;
+    letter-spacing:3px;
+    font-weight:600;
+    color:#ffffff;
+}
+
+h2{
+    margin-bottom:40px;
+    font-weight:400;
+    color:#cfcfcf;
+}
+
+/* Layout */
+.button-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.line-one,
+.line-two{
+    display:flex;
+}
+
+/* Elegant Glass Buttons */
+.btn{
+    height:200px;
+    width:200px;
+    margin:2rem;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.05);
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.4);
+    cursor:pointer;
+    transition: all 0.3s ease;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.5rem;
+    font-weight:bold;
+    color:#fff;
+}
+
+/* Hover Interaction */
+.btn:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.6);
+}
+
+/* Subtle Color Tones */
+.red{
+    background: linear-gradient(145deg,#5f2c82,#3f1b53);
+}
+
+.yellow{
+    background: linear-gradient(145deg,#8360c3,#6a4fb3);
+}
+
+.green{
+    background: linear-gradient(145deg,#134e5e,#0f3443);
+}
+
+.blue{
+    background: linear-gradient(145deg,#355c7d,#2a3f5f);
+}
+
+/* Game Flash */
+.flash{
+    box-shadow:
+        0 0 40px rgba(255,255,255,0.7);
+    transform: scale(1.05);
+}
+
+/* User Click */
+.userflash{
+    transform: scale(0.95);
+    filter: brightness(1.2);
+}
